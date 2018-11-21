@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         myWebView = findViewById(R.id.webView);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("http://2be7ae63.ngrok.io");
+        myWebView.loadUrl("http://4ebf0f8f.ngrok.io/");
         myWebView.setWebViewClient(new WebViewClient());
     }
     @Override
@@ -42,4 +42,16 @@ public class MainActivity extends AppCompatActivity {
         else super.onBackPressed();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        myWebView.saveState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState)
+    {
+        super.onRestoreInstanceState(savedInstanceState);
+        myWebView.restoreState(savedInstanceState);
+    }
 }
