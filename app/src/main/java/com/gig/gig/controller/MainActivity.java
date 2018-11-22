@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         myWebView = findViewById(R.id.webView);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("http://4ebf0f8f.ngrok.io/");
+        myWebView.loadUrl("http://2aa4b44d.ngrok.io/");
         myWebView.setWebViewClient(new WebViewClient());
     }
     @Override
